@@ -7,8 +7,8 @@ class App extends Component {
   componentDidMount () {
     if (process.env.TARO_ENV === 'weapp') {
       Taro.cloud.init({
-        // env: 'chest-release-aakze',
-        env: 'chest-dev-ut0l4',
+        // env: 'drifting-release-cgtfe',
+        env: 'drifting-dev-n4ip7',
         traceUser: true,
       })
 

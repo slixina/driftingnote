@@ -2,8 +2,8 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-  // env: 'chest-release-aakze',
-  env: 'chest-dev-ut0l4',
+  // env: 'drifting-release-cgtfe',
+  env: 'drifting-dev-n4ip7',
   traceUser: true,
 })
 const wxContext = cloud.getWXContext()
@@ -14,57 +14,7 @@ const _ = db.command
 exports.main = async (event, context) => {
   let { api, payload = {}, userInfo: { openId } } = event
 
-  // 获取舔狗日记列表
-  if (api === 'getDogDiaryList') {
-    const MAX_LIMIT = 100
-    const countResult = await db.collection('dogDiary').count()
-    const total = countResult.total
-    const batchTimes = Math.ceil(total / 100)
-    const tasks = []
-    for (let i = 0; i < batchTimes; i++) {
-      const promise = db.collection('dogDiary').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
-      tasks.push(promise)
-    }
-
-    return (await Promise.all(tasks)).reduce((acc, cur) => {
-      return [...acc, ...cur.data]
-    }, [])
-  }
-
-  //获取真心话大冒险列表
-  else if (api === 'getTruthOrDareList') {
-    const MAX_LIMIT = 100
-    const countResult = await db.collection('truthOrDare').count()
-    const total = countResult.total
-    const batchTimes = Math.ceil(total / 100)
-    const tasks = []
-    for (let i = 0; i < batchTimes; i++) {
-      const promise = db.collection('truthOrDare').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
-      tasks.push(promise)
-    }
-
-    return (await Promise.all(tasks)).reduce((acc, cur) => {
-      return [...acc, ...cur.data]
-    }, [])
-  }
-
-  //获取毒鸡汤列表
-  else if (api === 'getPoisoneSoupList') {
-    const MAX_LIMIT = 100
-    const countResult = await db.collection('poisoneSoup').count()
-    const total = countResult.total
-    const batchTimes = Math.ceil(total / 100)
-    const tasks = []
-    for (let i = 0; i < batchTimes; i++) {
-      const promise = db.collection('poisoneSoup').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
-      tasks.push(promise)
-    }
-    return (await Promise.all(tasks)).reduce((acc, cur) => {
-      return [...acc, ...cur.data]
-    }, [])
-  }
-
-  else if (api === 'getDriftingListByOpenId') {
+  if (api === 'getDriftingListByOpenId') {
     console.log({ openId })
     const response1 = await db.collection('driftingList').where({
       authorOpenId: _.eq(openId)
