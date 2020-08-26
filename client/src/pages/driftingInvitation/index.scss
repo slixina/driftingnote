@@ -1,0 +1,30 @@
+.index{
+    width: 100vw;
+    height: 100vh;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #edf1f7;
+    overflow: scroll;
+
+    .line{
+        padding: 10rpx;
+    }
+    
+    .content{
+
+        .item{
+            margin: 20rpx;
+        }
+    }
+
+    .submit{
+        margin-top: 50rpx;
+        // color: #edf1f7;
+    }
+    .submit-none{
+        color: #eeeeee;
+        border-color: #eeeeee;
+        margin-top: 50rpx;
+        // color: #edf1f7;
+    }
+}

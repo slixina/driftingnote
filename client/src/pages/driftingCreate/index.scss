@@ -1,0 +1,28 @@
+.index{
+    width: 100vw;
+    height: 100vh;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #edf1f7;
+    overflow: scroll;
+
+    .line{
+        padding: 10rpx;
+    }
+    
+    .content{
+
+        .item{
+            margin: 20rpx;
+        }
+    }
+
+    .submit{
+        margin-top: 50rpx;
+        // color: #edf1f7;
+    }
+
+    .AtImagePicker-wrap{
+        margin-left: -10rpx;
+    }
+}

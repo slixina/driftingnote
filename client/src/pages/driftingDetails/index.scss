@@ -1,0 +1,71 @@
+.index {
+    width: 100vw;
+    height: 100vh;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #edf1f7;
+    overflow: scroll;
+
+    .content {
+
+        .item {
+            margin: 20rpx;
+        }
+    }
+
+    .btn-invitation {
+        position: fixed;
+        background-color: white;
+        top: 60rpx;
+        right: 0;
+        font-size: 28rpx;
+        padding: 8rpx 20rpx;
+        border-radius: 40rpx 0 0 40rpx;
+    }
+
+    .p-title {
+        position: relative;
+        margin-bottom: 10rpx;
+        padding-left: 36rpx;
+        color: #6a6a77;
+        font-size: 28rpx;
+        font-weight: 700;
+
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 16rpx;
+            top: 50%;
+            margin-top: -13rpx;
+            width: 8rpx;
+            height: 30rpx;
+            background-color: #6190e8;
+            box-shadow: 0 5rpx 10rpx 0 rgba(97, 144, 232, 0.2);
+            border-radius: 1rpx;
+
+        }
+    }
+
+    .line {
+        height: 30rpx;
+    }
+
+    .avatar {
+        display: inline-block;
+        position: absolute;
+        width: 36rpx;
+        height: 36rpx;
+        border-radius: 50%;
+        left: -3rpx;
+        top: 0rpx;
+        z-index: 9;
+
+    }
+
+    .AtTimeline{
+        padding: 0 40rpx;
+        box-sizing: border-box;
+    }
+}
