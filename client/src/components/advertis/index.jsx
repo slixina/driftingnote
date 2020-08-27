@@ -23,7 +23,7 @@ function advertis(props) {
             autoplay>
             {
                 imageList.map(ele => (
-                    <SwiperItem>
+                    <SwiperItem className="swiperItem" key={ele}>
                         <View className='image-wrap'>
                             <Image className="img" src={ele} mode="widthFix" />
                         </View>

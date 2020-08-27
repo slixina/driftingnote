@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '流浪之书'
+  navigationBarTitleText: '首页'
 }

@@ -1,3 +1,49 @@
 .index{
     width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    background-color: #edf1f7;
+    
+    .banner{
+        width: 100%;
+    }
+    // .advertis-wrap{
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    // }
+
+    .content-wrap{
+        line-height: 50rpx;
+        background: #00000000;
+        border-left: 10rpx solid #4286F4;
+        margin: 90rpx 30rpx;
+        padding: 30rpx 10rpx 30rpx 20rpx;
+        quotes: "\201C""\201D""\2018""\2019";
+
+        &::before{
+            color: #4286f4;
+            content: open-quote;
+            font-size: 160rpx;
+            line-height: 15rpx;
+            // margin-right: 30rpx;
+            margin-left: -100rpx;
+            margin-top: -50rpx;
+            vertical-align: -60rpx;
+        }
+    }
+
+    .btn{
+        display: block;
+        width: 250rpx;
+        margin: 80rpx auto;
+        color: #fff;
+        background-color: #26a69a;
+        text-align: center;
+        transition: .2s ease-out;
+        border-radius: 4rpx;
+        height: 36rpx;
+        line-height: 36rpx;
+        padding: 10rpx 40rpx;
+    }
 }

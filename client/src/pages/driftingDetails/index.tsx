@@ -144,7 +144,7 @@ export default class Index extends Component {
     participant.forEach(element => {
       list.push({
         icon: 'clock',
-        title: `${getDate(element.createTime)} ${element.nickName} in ${element.city}`,
+        title: `${getDate(element.createTime)} ${element.nickName} in ${element.city || element.province || element.country}`,
         content: [
           <Image className="avatar" src={element.avatarUrl} />,
           `*邮寄地址：${element.address}`,
